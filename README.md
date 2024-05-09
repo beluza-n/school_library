@@ -62,3 +62,6 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+
+Перейти на http://127.0.0.1:8000/books (пункт 1 про SQL-запрос)
+или на http://127.0.0.1:8000/assets (пункт 4 про активы)

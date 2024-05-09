@@ -5,11 +5,8 @@ from django.db.models import Q
 
 
 def book_list(request):
-    # french_authors = Author.objects.filter(language="Французский").values_list('id', flat=True)
-
-
-    books = Book.objects.all().filter(Q(author_id__in=[1, 2, 3]) | Q(author_id__is_active=True)).union(
-        Book.objects.all().filter(Q(author_id__in=[4, 5, 6]) | Q(author_id__is_active=True))
+    books = Book.objects.all().filter(Q(author_id__in=[2, 3, 5]) | Q(author_id__is_active=True)).union(
+        Book.objects.all().filter(Q(author_id__in=[7, 8, 9]) | Q(author_id__is_active=True))
         )
 
     print(books)
